@@ -1,0 +1,39 @@
+A Program to demonstrate how to configure the multiple interceptors to single URL with order by using order method:
+Programs:
+* AppConfig.java
+* AppInit.java
+* ActionHandlerController.java
+* ActionHandlerInterceptor1.java
+* ActionHandlerInterceptor2.java
+* ActionHandlerInterceptor3.java
+Notes:
+* To mention the order to execute the interceptors InterceptorRegistration class given order method.
+* public InterceptorRegistration order(int order) method to mention order, it accept int value.
+* if order is low then that interceptor will execute first and order is high then that interceptor will execute last. 
+Output:
+console output for this url: http://localhost:8080/SpringInterceptorApplication6/action/actionHandler1
+From preHandle method in ActionHandlerInterceptor3 class
+From preHandle method in ActionHandlerInterceptor1 class
+From preHandle method in ActionHandlerInterceptor2 class
+From actionHandler1 method in ActionHandlerController class
+From postHandle method in ActionHandlerInterceptor2 class
+From postHandle method in ActionHandlerInterceptor1 class
+From postHandle method in ActionHandlerInterceptor3 class
+
+console output for this url: http://localhost:8080/SpringInterceptorApplication6/action/actionHandler2
+From preHandle method in ActionHandlerInterceptor3 class
+From preHandle method in ActionHandlerInterceptor1 class
+From preHandle method in ActionHandlerInterceptor2 class
+From actionHandler2 method in ActionHandlerController class
+From postHandle method in ActionHandlerInterceptor2 class
+From postHandle method in ActionHandlerInterceptor1 class
+From postHandle method in ActionHandlerInterceptor3 class
+
+console output for this url: http://localhost:8080/SpringInterceptorApplication6/action/actionHandler3
+From preHandle method in ActionHandlerInterceptor3 class
+From preHandle method in ActionHandlerInterceptor1 class
+From preHandle method in ActionHandlerInterceptor2 class
+From actionHandler3 method in ActionHandlerController class
+From postHandle method in ActionHandlerInterceptor2 class
+From postHandle method in ActionHandlerInterceptor1 class
+From postHandle method in ActionHandlerInterceptor3 class
